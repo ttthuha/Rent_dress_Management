@@ -59,7 +59,7 @@ namespace GUI
         {
             if ( txtEName.Text != "" && cbERole.Text != "" && cbEStatus.Text != "")
             {
-                int EmployeeID = int.Parse(txtSearchEmp.Text);
+                int EmployeeID = int.Parse(txtEmpID.Text);
                 string EmployeeName = txtEName.Text;
                 string Password = txtEPass.Text;
                 string Status = cbEStatus.Text;
