@@ -21,14 +21,19 @@ namespace BUS
             return dal.InsertEmp(emp);
         }
 
-        public bool UpdateEmp(EmpDTO emp)
+        public bool UpdateEmp(int EmployeeID, string EmployeeName, string Password, string Status, string IsAdmin)
         {
-            return dal.UpdateEmp(emp);
+            return dal.UpdateEmp(EmployeeID, EmployeeName, Password, Status, IsAdmin);
         }
 
         public DataTable Display(string sql)
         {
             return dal.Display(sql);
+        }
+
+        public EmpDTO Get(int empID)
+        {
+            return dal.Get(empID);
         }
     }
 }

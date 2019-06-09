@@ -26,7 +26,8 @@ namespace GUI
         private void butnSignIn_Click(object sender, EventArgs e)
         {
             int EmpID = int.Parse(textUserName.Text);
-            EmpDTO emp = new EmpDTO (EmpID, textPassword.Text);
+    
+            EmpDTO emp = new EmpDTO() { EmployeeID = EmpID, password =textPassword.Text};
             if (textUserName.Text == "")
             {
                 MessageBox.Show("Please enter username");
@@ -37,6 +38,7 @@ namespace GUI
             }
             else
             {
+                Session.instance.Emp = new EmpBUS().Get(EmpID);
                 if (bus.CheckAccount(emp) == 1)
                 {
                     this.Close();

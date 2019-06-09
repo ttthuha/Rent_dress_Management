@@ -7,6 +7,7 @@ using System.Data.Sql;
 using DTO;
 using System.Data.SqlClient;
 using System.Data;
+using Dapper;
 
 namespace DAL
 {
@@ -58,6 +59,26 @@ namespace DAL
 
             return false;
         }
+
+
+        public CustomerDTO Get(int customerID)
+        {
+            try
+            {
+                con.Open();
+                return con.QueryFirst<CustomerDTO>("select * from Customer where CustomerId=@customerID", new { customerID });
+            }
+
+            catch (Exception e) { }
+
+            finally
+            { con.Close(); }
+
+
+            return null;
+        }
+
+
 
         public DataTable Display(string sql)
         {

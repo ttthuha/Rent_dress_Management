@@ -46,6 +46,7 @@
     <Compile Include="EmpBUS.cs" />
     <Compile Include="OrderLineBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Session.cs" />
     <Compile Include="StockBUS.cs" />
   </ItemGroup>
   <ItemGroup>

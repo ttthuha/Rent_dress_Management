@@ -25,14 +25,9 @@ namespace GUI
 
         private void btnSearchEmp_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtSearchEmp.Text))
-            {
-                (dataGridView1.DataSource as DataTable).DefaultView.RowFilter = string.Empty;
-            }
-            else
-            {
-                (dataGridView1.DataSource as DataTable).DefaultView.RowFilter = string.Format("EmployeeID= {0} ", txtSearchEmp.Text);
-            }
+            DataTable tblCustomer = new DataTable();
+            tblCustomer = emp_BUS.Display("Select * from Employee where EmployeeName like +'%" + txtSearchEmp.Text + "%'");
+            dataGridView1.DataSource = tblCustomer;
         }
 
         private void btnShowEmp_Click(object sender, EventArgs e)
@@ -44,7 +39,7 @@ namespace GUI
         {
             if (txtEName.Text != "" && txtEPass.Text != "" && cbERole.Text != "" && cbEStatus.Text != "")
             {
-                EmpDTO emp_DTO = new EmpDTO(txtEName.Text, txtEPass.Text, cbERole.Text, cbEStatus.Text);
+                EmpDTO emp_DTO = new EmpDTO() {EmployeeName = txtEName.Text, password=txtEPass.Text,Status=cbEStatus.Text, IsAdmin=cbERole.Text };
                 if (emp_BUS.InsertEmp(emp_DTO))
                 {
                     MessageBox.Show("Adding success");
@@ -62,11 +57,17 @@ namespace GUI
 
         private void btnUpdateEmp_Click(object sender, EventArgs e)
         {
-            if (txtSearchEmp.Text != "" && txtEName.Text != "" && cbERole.Text != "" && cbEStatus.Text != "")
+            if ( txtEName.Text != "" && cbERole.Text != "" && cbEStatus.Text != "")
             {
-                int EmpID = int.Parse(txtSearchEmp.Text);
-                EmpDTO emp_DTO = new EmpDTO(EmpID, txtEName.Text, cbERole.Text, cbEStatus.Text);
-                if (emp_BUS.UpdateEmp(emp_DTO))
+                int EmployeeID = int.Parse(txtSearchEmp.Text);
+                string EmployeeName = txtEName.Text;
+                string Password = txtEPass.Text;
+                string Status = cbEStatus.Text;
+                string IsAdmin = cbERole.Text;
+
+                //EmpDTO emp_DTO = new EmpDTO() { EmployeeName = txtEName.Text, password = txtEPass.Text, Status = cbEStatus.Text, Role = cbERole.Text };
+
+                if (emp_BUS.UpdateEmp(EmployeeID, EmployeeName, Password, Status, IsAdmin))
                 {
                     MessageBox.Show("Updated successfully");
                 }
@@ -96,7 +97,7 @@ namespace GUI
         private void EmployeeManagement_Load(object sender, EventArgs e)
         {
             DataTable tblemp = new DataTable();
-            tblemp = emp_BUS.Display("Select * from Employee");
+            tblemp = emp_BUS.Display("Select * from Employee ");
             dataGridView1.DataSource = tblemp;
             dataGridView1.AllowUserToAddRows = false;
             if (tblemp.Rows.Count == 0)
@@ -105,12 +106,23 @@ namespace GUI
             }
             else
             {
-                txtSearchEmp.Text = dataGridView1.CurrentRow.Cells["EmployeeID"].Value.ToString();
+                txtEmpID.Text = dataGridView1.CurrentRow.Cells["EmployeeID"].Value.ToString();
                 txtEName.Text = dataGridView1.CurrentRow.Cells["EmployeeName"].Value.ToString();
                 txtEPass.Text = dataGridView1.CurrentRow.Cells["Password"].Value.ToString();
                 cbEStatus.Text = dataGridView1.CurrentRow.Cells["Status"].Value.ToString();
                 cbERole.Text = dataGridView1.CurrentRow.Cells["IsAdmin"].Value.ToString();
             }
+        }
+
+       
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtEmpID.Text = dataGridView1.CurrentRow.Cells["EmployeeID"].Value.ToString();
+            txtEName.Text = dataGridView1.CurrentRow.Cells["EmployeeName"].Value.ToString();
+            txtEPass.Text = dataGridView1.CurrentRow.Cells["Password"].Value.ToString();
+            cbEStatus.Text = dataGridView1.CurrentRow.Cells["Status"].Value.ToString();
+            cbERole.Text = dataGridView1.CurrentRow.Cells["IsAdmin"].Value.ToString();
         }
     }
 }

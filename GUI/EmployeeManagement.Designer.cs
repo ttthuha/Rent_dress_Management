@@ -39,11 +39,13 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.btnUpdateEmp = new System.Windows.Forms.Button();
             this.btnAddEmp = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtEName = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnSearchEmp = new System.Windows.Forms.Button();
             this.txtSearchEmp = new System.Windows.Forms.TextBox();
+            this.txtEName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtEmpID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -155,22 +157,6 @@
             this.btnAddEmp.UseVisualStyleBackColor = true;
             this.btnAddEmp.Click += new System.EventHandler(this.btnAddEmp_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 145);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 13);
-            this.label1.TabIndex = 60;
-            this.label1.Text = "Employee Name";
-            // 
-            // txtEName
-            // 
-            this.txtEName.Location = new System.Drawing.Point(124, 142);
-            this.txtEName.Name = "txtEName";
-            this.txtEName.Size = new System.Drawing.Size(263, 20);
-            this.txtEName.TabIndex = 56;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToOrderColumns = true;
@@ -179,6 +165,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(762, 236);
             this.dataGridView1.TabIndex = 64;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // btnSearchEmp
             // 
@@ -197,11 +184,47 @@
             this.txtSearchEmp.Size = new System.Drawing.Size(191, 20);
             this.txtSearchEmp.TabIndex = 54;
             // 
+            // txtEName
+            // 
+            this.txtEName.Location = new System.Drawing.Point(124, 142);
+            this.txtEName.Name = "txtEName";
+            this.txtEName.Size = new System.Drawing.Size(263, 20);
+            this.txtEName.TabIndex = 56;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(30, 145);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 13);
+            this.label1.TabIndex = 60;
+            this.label1.Text = "Employee Name";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(214, 104);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(67, 13);
+            this.label6.TabIndex = 71;
+            this.label6.Text = "Employee ID";
+            // 
+            // txtEmpID
+            // 
+            this.txtEmpID.Cursor = System.Windows.Forms.Cursors.No;
+            this.txtEmpID.Location = new System.Drawing.Point(308, 101);
+            this.txtEmpID.Name = "txtEmpID";
+            this.txtEmpID.ReadOnly = true;
+            this.txtEmpID.Size = new System.Drawing.Size(263, 20);
+            this.txtEmpID.TabIndex = 70;
+            // 
             // EmployeeManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 534);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtEmpID);
             this.Controls.Add(this.btnShowEmp);
             this.Controls.Add(this.txtEPass);
             this.Controls.Add(this.label3);
@@ -239,10 +262,12 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnUpdateEmp;
         private System.Windows.Forms.Button btnAddEmp;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtEName;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnSearchEmp;
         private System.Windows.Forms.TextBox txtSearchEmp;
+        private System.Windows.Forms.TextBox txtEName;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtEmpID;
     }
 }

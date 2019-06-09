@@ -29,6 +29,7 @@ namespace GUI
         {
             Application.Run(new DressManagement());
         }
+
         private void openEmployeeManagement(object obj)
         {
             Application.Run(new EmployeeManagement());
@@ -57,5 +58,7 @@ namespace GUI
             th.SetApartmentState(ApartmentState.STA);
             th.Start();
         }
+
+        
     }
 }

@@ -26,9 +26,14 @@ namespace BUS
             dal.ReduceStockQuant(dressID);
         }
 
-        public DataTable InsertOrderLine(int dressID, int quant)
+        public DataTable InsertOrderLine(int orderId, int dressID, int quantity)
         {
-            return dal.InsertOrderLine(dressID,quant);
+            return dal.InsertOrderLine(orderId, dressID, quantity);
+        }
+        public int InsertOrder(int CustomerID,
+                int EmployeeID, int Total, int DressId, DateTime OrderDate)
+        {
+            return dal.InsertOrder(CustomerID, EmployeeID, Total, OrderDate);
         }
     }
 }

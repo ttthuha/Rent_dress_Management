@@ -48,12 +48,13 @@
             this.btnShowAllCustomer = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtCID = new System.Windows.Forms.TextBox();
+            this.btnOrderHistory = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomer)).BeginInit();
             this.SuspendLayout();
             // 
             // txtSearchCus
             // 
-            this.txtSearchCus.Location = new System.Drawing.Point(14, 22);
+            this.txtSearchCus.Location = new System.Drawing.Point(12, 94);
             this.txtSearchCus.Name = "txtSearchCus";
             this.txtSearchCus.Size = new System.Drawing.Size(181, 20);
             this.txtSearchCus.TabIndex = 0;
@@ -61,7 +62,7 @@
             // 
             // btnSearchCus
             // 
-            this.btnSearchCus.Location = new System.Drawing.Point(250, 22);
+            this.btnSearchCus.Location = new System.Drawing.Point(248, 94);
             this.btnSearchCus.Name = "btnSearchCus";
             this.btnSearchCus.Size = new System.Drawing.Size(75, 23);
             this.btnSearchCus.TabIndex = 1;
@@ -72,7 +73,7 @@
             // dataGridViewCustomer
             // 
             this.dataGridViewCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCustomer.Location = new System.Drawing.Point(14, 273);
+            this.dataGridViewCustomer.Location = new System.Drawing.Point(12, 345);
             this.dataGridViewCustomer.Name = "dataGridViewCustomer";
             this.dataGridViewCustomer.Size = new System.Drawing.Size(712, 236);
             this.dataGridViewCustomer.TabIndex = 2;
@@ -80,7 +81,7 @@
             // 
             // txtCName
             // 
-            this.txtCName.Location = new System.Drawing.Point(108, 113);
+            this.txtCName.Location = new System.Drawing.Point(106, 185);
             this.txtCName.Name = "txtCName";
             this.txtCName.Size = new System.Drawing.Size(181, 20);
             this.txtCName.TabIndex = 3;
@@ -88,7 +89,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 116);
+            this.label1.Location = new System.Drawing.Point(12, 188);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 13);
             this.label1.TabIndex = 4;
@@ -97,7 +98,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 157);
+            this.label2.Location = new System.Drawing.Point(12, 229);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 13);
             this.label2.TabIndex = 5;
@@ -106,7 +107,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(377, 113);
+            this.label3.Location = new System.Drawing.Point(375, 185);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 6;
@@ -115,7 +116,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(377, 157);
+            this.label4.Location = new System.Drawing.Point(375, 229);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(45, 13);
             this.label4.TabIndex = 7;
@@ -123,28 +124,28 @@
             // 
             // txtCPhone
             // 
-            this.txtCPhone.Location = new System.Drawing.Point(108, 157);
+            this.txtCPhone.Location = new System.Drawing.Point(106, 229);
             this.txtCPhone.Name = "txtCPhone";
             this.txtCPhone.Size = new System.Drawing.Size(181, 20);
             this.txtCPhone.TabIndex = 8;
             // 
             // txtCEmail
             // 
-            this.txtCEmail.Location = new System.Drawing.Point(452, 110);
+            this.txtCEmail.Location = new System.Drawing.Point(450, 182);
             this.txtCEmail.Name = "txtCEmail";
             this.txtCEmail.Size = new System.Drawing.Size(181, 20);
             this.txtCEmail.TabIndex = 9;
             // 
             // txtCAddress
             // 
-            this.txtCAddress.Location = new System.Drawing.Point(452, 157);
+            this.txtCAddress.Location = new System.Drawing.Point(450, 229);
             this.txtCAddress.Name = "txtCAddress";
             this.txtCAddress.Size = new System.Drawing.Size(181, 20);
             this.txtCAddress.TabIndex = 10;
             // 
             // btnAddCus
             // 
-            this.btnAddCus.Location = new System.Drawing.Point(66, 210);
+            this.btnAddCus.Location = new System.Drawing.Point(64, 282);
             this.btnAddCus.Name = "btnAddCus";
             this.btnAddCus.Size = new System.Drawing.Size(75, 23);
             this.btnAddCus.TabIndex = 11;
@@ -154,7 +155,7 @@
             // 
             // btnUpdateCus
             // 
-            this.btnUpdateCus.Location = new System.Drawing.Point(214, 210);
+            this.btnUpdateCus.Location = new System.Drawing.Point(212, 282);
             this.btnUpdateCus.Name = "btnUpdateCus";
             this.btnUpdateCus.Size = new System.Drawing.Size(75, 23);
             this.btnUpdateCus.TabIndex = 12;
@@ -164,7 +165,7 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(609, 210);
+            this.btnBack.Location = new System.Drawing.Point(607, 282);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
             this.btnBack.TabIndex = 13;
@@ -175,7 +176,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(485, 9);
+            this.label5.Location = new System.Drawing.Point(171, 24);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(148, 13);
             this.label5.TabIndex = 14;
@@ -183,7 +184,7 @@
             // 
             // btnRentDress
             // 
-            this.btnRentDress.Location = new System.Drawing.Point(365, 210);
+            this.btnRentDress.Location = new System.Drawing.Point(363, 282);
             this.btnRentDress.Name = "btnRentDress";
             this.btnRentDress.Size = new System.Drawing.Size(75, 23);
             this.btnRentDress.TabIndex = 15;
@@ -193,7 +194,7 @@
             // 
             // btnReturnDress
             // 
-            this.btnReturnDress.Location = new System.Drawing.Point(488, 210);
+            this.btnReturnDress.Location = new System.Drawing.Point(486, 282);
             this.btnReturnDress.Name = "btnReturnDress";
             this.btnReturnDress.Size = new System.Drawing.Size(75, 23);
             this.btnReturnDress.TabIndex = 16;
@@ -202,7 +203,7 @@
             // 
             // btnShowAllCustomer
             // 
-            this.btnShowAllCustomer.Location = new System.Drawing.Point(365, 22);
+            this.btnShowAllCustomer.Location = new System.Drawing.Point(363, 94);
             this.btnShowAllCustomer.Name = "btnShowAllCustomer";
             this.btnShowAllCustomer.Size = new System.Drawing.Size(75, 23);
             this.btnShowAllCustomer.TabIndex = 17;
@@ -213,7 +214,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(173, 76);
+            this.label6.Location = new System.Drawing.Point(171, 148);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 13);
             this.label6.TabIndex = 19;
@@ -222,17 +223,28 @@
             // txtCID
             // 
             this.txtCID.Cursor = System.Windows.Forms.Cursors.No;
-            this.txtCID.Location = new System.Drawing.Point(267, 73);
+            this.txtCID.Location = new System.Drawing.Point(265, 145);
             this.txtCID.Name = "txtCID";
             this.txtCID.ReadOnly = true;
             this.txtCID.Size = new System.Drawing.Size(181, 20);
             this.txtCID.TabIndex = 18;
             // 
+            // btnOrderHistory
+            // 
+            this.btnOrderHistory.Location = new System.Drawing.Point(485, 24);
+            this.btnOrderHistory.Name = "btnOrderHistory";
+            this.btnOrderHistory.Size = new System.Drawing.Size(146, 23);
+            this.btnOrderHistory.TabIndex = 20;
+            this.btnOrderHistory.Text = "Order History";
+            this.btnOrderHistory.UseVisualStyleBackColor = true;
+            this.btnOrderHistory.Click += new System.EventHandler(this.btnOrderHistory_Click);
+            // 
             // CustomerManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(733, 515);
+            this.ClientSize = new System.Drawing.Size(728, 593);
+            this.Controls.Add(this.btnOrderHistory);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtCID);
             this.Controls.Add(this.btnShowAllCustomer);
@@ -283,5 +295,6 @@
         private System.Windows.Forms.Button btnShowAllCustomer;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtCID;
+        private System.Windows.Forms.Button btnOrderHistory;
     }
 }

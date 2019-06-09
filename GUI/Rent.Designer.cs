@@ -36,14 +36,12 @@
             this.cbxDressName = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.rentQuant = new System.Windows.Forms.NumericUpDown();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.GridViewOrderLine = new System.Windows.Forms.DataGridView();
             this.btnAddOrder = new System.Windows.Forms.Button();
-            this.btnUpdateOrder = new System.Windows.Forms.Button();
-            this.btnDeleteOrder = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnOkOrder = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.rentQuant)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridViewOrderLine)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -114,41 +112,24 @@
             this.rentQuant.Size = new System.Drawing.Size(187, 20);
             this.rentQuant.TabIndex = 10;
             // 
-            // dataGridView1
+            // GridViewOrderLine
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 215);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(764, 244);
-            this.dataGridView1.TabIndex = 11;
+            this.GridViewOrderLine.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridViewOrderLine.Location = new System.Drawing.Point(12, 215);
+            this.GridViewOrderLine.Name = "GridViewOrderLine";
+            this.GridViewOrderLine.Size = new System.Drawing.Size(764, 244);
+            this.GridViewOrderLine.TabIndex = 11;
+            this.GridViewOrderLine.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridViewOrderLine_CellClick);
             // 
             // btnAddOrder
             // 
-            this.btnAddOrder.Location = new System.Drawing.Point(60, 163);
+            this.btnAddOrder.Location = new System.Drawing.Point(268, 163);
             this.btnAddOrder.Name = "btnAddOrder";
             this.btnAddOrder.Size = new System.Drawing.Size(75, 23);
             this.btnAddOrder.TabIndex = 12;
             this.btnAddOrder.Text = "Add";
             this.btnAddOrder.UseVisualStyleBackColor = true;
             this.btnAddOrder.Click += new System.EventHandler(this.btnAddOrder_Click);
-            // 
-            // btnUpdateOrder
-            // 
-            this.btnUpdateOrder.Location = new System.Drawing.Point(165, 163);
-            this.btnUpdateOrder.Name = "btnUpdateOrder";
-            this.btnUpdateOrder.Size = new System.Drawing.Size(75, 23);
-            this.btnUpdateOrder.TabIndex = 13;
-            this.btnUpdateOrder.Text = "Update";
-            this.btnUpdateOrder.UseVisualStyleBackColor = true;
-            // 
-            // btnDeleteOrder
-            // 
-            this.btnDeleteOrder.Location = new System.Drawing.Point(278, 163);
-            this.btnDeleteOrder.Name = "btnDeleteOrder";
-            this.btnDeleteOrder.Size = new System.Drawing.Size(75, 23);
-            this.btnDeleteOrder.TabIndex = 14;
-            this.btnDeleteOrder.Text = "Delete";
-            this.btnDeleteOrder.UseVisualStyleBackColor = true;
             // 
             // btnBack
             // 
@@ -162,12 +143,13 @@
             // 
             // btnOkOrder
             // 
-            this.btnOkOrder.Location = new System.Drawing.Point(434, 163);
+            this.btnOkOrder.Location = new System.Drawing.Point(414, 163);
             this.btnOkOrder.Name = "btnOkOrder";
             this.btnOkOrder.Size = new System.Drawing.Size(75, 23);
             this.btnOkOrder.TabIndex = 16;
             this.btnOkOrder.Text = "OK";
             this.btnOkOrder.UseVisualStyleBackColor = true;
+            this.btnOkOrder.Click += new System.EventHandler(this.btnOkOrder_Click);
             // 
             // Rent
             // 
@@ -176,10 +158,8 @@
             this.ClientSize = new System.Drawing.Size(791, 471);
             this.Controls.Add(this.btnOkOrder);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.btnDeleteOrder);
-            this.Controls.Add(this.btnUpdateOrder);
             this.Controls.Add(this.btnAddOrder);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.GridViewOrderLine);
             this.Controls.Add(this.rentQuant);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbxDressName);
@@ -191,7 +171,7 @@
             this.Name = "Rent";
             this.Text = "Rent";
             ((System.ComponentModel.ISupportInitialize)(this.rentQuant)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridViewOrderLine)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,10 +187,8 @@
         private System.Windows.Forms.ComboBox cbxDressName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown rentQuant;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView GridViewOrderLine;
         private System.Windows.Forms.Button btnAddOrder;
-        private System.Windows.Forms.Button btnUpdateOrder;
-        private System.Windows.Forms.Button btnDeleteOrder;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnOkOrder;
     }

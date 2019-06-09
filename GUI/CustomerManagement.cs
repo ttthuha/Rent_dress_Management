@@ -18,6 +18,7 @@ namespace GUI
 
         CustomerBUS customer_bus = new CustomerBUS();
         Thread th;
+        int CustomerID;
 
         public CustomerManagement()
         {
@@ -155,17 +156,36 @@ namespace GUI
             dataGridViewCustomer.DataSource = tblCustomer;
         }
 
+        
+
         private void btnRentDress_Click(object sender, EventArgs e)
         {
+            customerId = Convert.ToInt32(txtCID.Text);
             this.Close();
             th = new Thread(openRentForm);
             th.SetApartmentState(ApartmentState.STA);
             th.Start();
         }
 
+        int customerId;
         private void openRentForm(object obj)
         {
-            Application.Run(new Rent());
+            CustomerDTO customer = new CustomerBUS().Get(customerId);
+            var rentForm = new Rent(customer);
+            Application.Run(rentForm);
+        }
+
+        private void btnOrderHistory_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            th = new Thread(openOrderHistory);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
+        }
+        private void openOrderHistory(object obj)
+        {
+      
+            Application.Run(new OrderHistory());
         }
     }
 }

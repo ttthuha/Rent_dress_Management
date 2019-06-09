@@ -30,7 +30,6 @@
         {
             this.btnCusManage = new System.Windows.Forms.Button();
             this.btnStockManage = new System.Windows.Forms.Button();
-            this.btnViewReport = new System.Windows.Forms.Button();
             this.btnEmployeeManagement = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -60,18 +59,6 @@
             this.btnStockManage.UseVisualStyleBackColor = false;
             this.btnStockManage.Click += new System.EventHandler(this.btnStockManage_Click);
             // 
-            // btnViewReport
-            // 
-            this.btnViewReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnViewReport.Font = new System.Drawing.Font("Segoe Script", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewReport.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnViewReport.Location = new System.Drawing.Point(433, 319);
-            this.btnViewReport.Name = "btnViewReport";
-            this.btnViewReport.Size = new System.Drawing.Size(277, 46);
-            this.btnViewReport.TabIndex = 2;
-            this.btnViewReport.Text = "Order History";
-            this.btnViewReport.UseVisualStyleBackColor = false;
-            // 
             // btnEmployeeManagement
             // 
             this.btnEmployeeManagement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -91,7 +78,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnEmployeeManagement);
-            this.Controls.Add(this.btnViewReport);
             this.Controls.Add(this.btnStockManage);
             this.Controls.Add(this.btnCusManage);
             this.Name = "Main";
@@ -104,7 +90,6 @@
 
         private System.Windows.Forms.Button btnCusManage;
         private System.Windows.Forms.Button btnStockManage;
-        private System.Windows.Forms.Button btnViewReport;
         private System.Windows.Forms.Button btnEmployeeManagement;
     }
 }

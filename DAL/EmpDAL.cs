@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using DTO;
+using Dapper;
 
 namespace DAL
 {
@@ -15,7 +16,7 @@ namespace DAL
         public int CheckAccount(EmpDTO emp)
         {
             con.Open();
-            string SQL = string.Format("SELECT * FROM employee WHERE EmployeeID = {0} AND [Password] = {1}", emp.EID, emp.Epass);
+            string SQL = string.Format("SELECT * FROM employee WHERE EmployeeID = {0} AND [Password] = {1}", emp.EmployeeID, emp.password);
             SqlCommand cmd = new SqlCommand(SQL, con);
             SqlDataReader rd = cmd.ExecuteReader();
             int loginSuccessful;
@@ -39,13 +40,31 @@ namespace DAL
             return loginSuccessful;
         }
 
+        public EmpDTO Get(int EID)
+        {
+            try
+            {
+                con.Open();
+                return con.QueryFirst<EmpDTO>("select * from Employee where EmployeeID=@EID", new { EID });
+            }
+
+            catch (Exception e) { }
+
+            finally
+            { con.Close(); }
+
+
+            return null;
+
+        }
+
         public bool InsertEmp(EmpDTO emp)
         {
             try
             {
                 con.Open();
 
-                string SQL = string.Format("Insert into Employee(EmployeeName,[Password],[Status],IsAdmin) values ('{0}','{1}','{2}','{3}')", emp.EName, emp.Epass, emp.Status, emp.Role);
+                string SQL = string.Format("Insert into Employee(EmployeeName,[Password],[Status],IsAdmin) values ('{0}','{1}','{2}','{3}')", emp.EmployeeName, emp.password, emp.Status, emp.IsAdmin);
 
                 SqlCommand cmd = new SqlCommand(SQL, con);
                 if (cmd.ExecuteNonQuery() > 0)
@@ -64,26 +83,25 @@ namespace DAL
         }
 
         /*Update Employee*/
-        public bool UpdateEmp(EmpDTO emp)
+        public bool UpdateEmp( int EmployeeID, string EmployeeName,string Password, string Status, string IsAdmin)
         {
             try
             {
                 con.Open();
-
-                string SQL = string.Format("Update Employee(EmployeeName,[Status],IsAdmin) " + "set EmployeeName = '{0}', [Status] = '{1}', IsAdmin = '{2}' where EmployeeID = {3}",
-                    emp.EName, emp.Status, emp.Role, emp.EID);
-
+                string SQL = string.Format("Update employee set EmployeeName='{0}', Password='{1}', IsAdmin='{2}', Status='{3}' where EmployeeID ='{4}'",
+                  EmployeeName, Password, IsAdmin, Status, EmployeeID);
                 SqlCommand cmd = new SqlCommand(SQL, con);
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
             }
-
             catch (Exception e)
             { }
+
             finally
             {
                 con.Close();
             }
+
             return false;
         }
 

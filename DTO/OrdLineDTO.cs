@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class OrdLineDTO
+    public class OrderLineDTO
     {
         private int _OrdLineID;
         private int _OrdID;
@@ -74,7 +74,7 @@ namespace DTO
             }
         }
 
-        public OrdLineDTO() { }
+        public OrderLineDTO() { }
 
     }
 }

@@ -14,20 +14,21 @@ DROP TABLE Payment;
 
 select *from stock
 select *from employee
-select *from dress
+select *from dress;
 select * from Customer
+select * from [Order]
+select *from OrderLine
+
 create table employee 
 (
 	EmployeeID INT IDENTITY(1,1) NOT NULL,
 	EmployeeName varchar(50) NOT NULL,
 	Password varchar(50) NOT NULL,
-	Role varchar(20) NOT NULL,
 	Status varchar(20) NOT NULL,
+	IsAdmain varchar(20) NOT NULL,
 	Primary key (EmployeeID)
 ) 
-insert into employee vlaues ('',)
-insert into employee values ('Nguyen Van A','123456','admin','work ')
-select *from employee;
+
 create table customer 
 (
 	CustomerID INT IDENTITY(1,1) NOT NULL,
@@ -37,11 +38,7 @@ create table customer
 	[Address] varchar(100) NOT NULL,
 	Primary key (CustomerID)
 )
-select *from customer;
 
-insert into customer values ('Ha','9713271348','ha@gmail.com','91 le van tam, quan 5, tp HCM')
-select *from dress
-select *from stock;
 create table dress
 (
 	DressID INT IDENTITY(1,1) NOT NULL,
@@ -67,7 +64,7 @@ create table OrderLine
 	OrderID INT NOT NULL,
 	DressID INT NOT NULL,
 	Quantity int  NOT NULL,
-	[Sum] int  NOT NULL,
+	[Sum] float  NOT NULL,
 	Primary key (OrderID,DressID)
 
 )
@@ -87,8 +84,8 @@ create table Payment
 	PaymentID INT IDENTITY(1,1) NOT NULL,
 	OrderID INT NOT NULL,
 	EmployeeID INT NOT NULL,
-	Amount int NOT NULL,
-	Change int NOT NULL,
+	Amount float NOT NULL,
+	Change float NOT NULL,
 	PaymentDate datetime NOT NULL,
 	Primary key (PaymentID)
 )
@@ -123,3 +120,24 @@ BEGIN
 END
 
 
+SELECT        [Order].CustomerID, SUM(OrderLine.Sum) AS Total
+FROM            [Order] INNER JOIN
+                         OrderLine ON [Order].OrderID = OrderLine.OrderID INNER JOIN
+                         dress ON OrderLine.DressID = dress.DressID
+WHERE        ([Order].CustomerID = 1)
+GROUP BY [Order].CustomerID;
+
+
+SELECT        [Order].CustomerID AS [CUSTOMER ID],[Order].OrderID AS [ORDER ID], dress.DressName AS [Dress Name], dress.DressDecription AS [Dress Decription], dress.Price, OrderLine.Quantity, OrderLine.Quantity * dress.Price AS Total
+FROM            [Order] INNER JOIN
+                         OrderLine ON [Order].OrderID = OrderLine.OrderID INNER JOIN
+                         dress ON OrderLine.DressID = dress.DressID
+WHERE        ( [Order].CustomerID = 1)
+
+SELECT        [Order].CustomerID AS [CUSTOMER ID],[Order].OrderID, dress.DressName AS [Dress Name], dress.DressDecription AS [Dress Decription], dress.Price, OrderLine.Quantity, OrderLine.Quantity * dress.Price AS Total,
+				[Order].OrderDate as [OrderDate]
+FROM            [Order] INNER JOIN
+                         OrderLine ON [Order].OrderID = OrderLine.OrderID INNER JOIN
+                         dress ON OrderLine.DressID = dress.DressID
+
+order BY  [Order].CustomerID 

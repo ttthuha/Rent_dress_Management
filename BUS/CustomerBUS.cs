@@ -24,5 +24,9 @@ namespace BUS
         {
             return dal.Display(sql);
         }
+        public CustomerDTO Get(int id)
+        {
+            return dal.Get(id);
+        }
     }
 }
