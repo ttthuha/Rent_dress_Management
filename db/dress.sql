@@ -3,6 +3,7 @@ create database RentDressManagement;
 GO
 use RentDressManagement;
 
+select *from employee
 DROP TABLE Employee;
 DROP TABLE Customer;
 DROP TABLE Dress;
@@ -40,7 +41,7 @@ select *from customer;
 
 insert into customer values ('Ha','9713271348','ha@gmail.com','91 le van tam, quan 5, tp HCM')
 select *from dress
-
+select *from stock;
 create table dress
 (
 	DressID INT IDENTITY(1,1) NOT NULL,
@@ -62,11 +63,13 @@ create table [Order]
  
 create table OrderLine
 (
+	
 	OrderID INT NOT NULL,
 	DressID INT NOT NULL,
 	Quantity int  NOT NULL,
 	[Sum] int  NOT NULL,
 	Primary key (OrderID,DressID)
+
 )
 
 
