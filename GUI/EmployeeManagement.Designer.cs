@@ -51,7 +51,7 @@
             // 
             // btnShowEmp
             // 
-            this.btnShowEmp.Location = new System.Drawing.Point(500, 58);
+            this.btnShowEmp.Location = new System.Drawing.Point(500, 74);
             this.btnShowEmp.Name = "btnShowEmp";
             this.btnShowEmp.Size = new System.Drawing.Size(107, 23);
             this.btnShowEmp.TabIndex = 69;
@@ -61,7 +61,7 @@
             // 
             // txtEPass
             // 
-            this.txtEPass.Location = new System.Drawing.Point(124, 179);
+            this.txtEPass.Location = new System.Drawing.Point(124, 193);
             this.txtEPass.Name = "txtEPass";
             this.txtEPass.Size = new System.Drawing.Size(263, 20);
             this.txtEPass.TabIndex = 57;
@@ -70,7 +70,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(32, 181);
+            this.label3.Location = new System.Drawing.Point(39, 193);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 13);
             this.label3.TabIndex = 68;
@@ -82,7 +82,7 @@
             this.cbERole.Items.AddRange(new object[] {
             "employee",
             "admin"});
-            this.cbERole.Location = new System.Drawing.Point(557, 137);
+            this.cbERole.Location = new System.Drawing.Point(557, 151);
             this.cbERole.Margin = new System.Windows.Forms.Padding(2);
             this.cbERole.Name = "cbERole";
             this.cbERole.Size = new System.Drawing.Size(152, 21);
@@ -91,7 +91,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(497, 140);
+            this.label2.Location = new System.Drawing.Point(497, 154);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 13);
             this.label2.TabIndex = 67;
@@ -103,7 +103,7 @@
             this.cbEStatus.Items.AddRange(new object[] {
             "Work",
             "Quit"});
-            this.cbEStatus.Location = new System.Drawing.Point(557, 174);
+            this.cbEStatus.Location = new System.Drawing.Point(557, 188);
             this.cbEStatus.Margin = new System.Windows.Forms.Padding(2);
             this.cbEStatus.Name = "cbEStatus";
             this.cbEStatus.Size = new System.Drawing.Size(152, 21);
@@ -112,7 +112,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(497, 179);
+            this.label4.Location = new System.Drawing.Point(497, 193);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 13);
             this.label4.TabIndex = 66;
@@ -121,15 +121,16 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(205, 20);
+            this.label5.Font = new System.Drawing.Font("Segoe Print", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(182, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(145, 13);
+            this.label5.Size = new System.Drawing.Size(310, 37);
             this.label5.TabIndex = 65;
             this.label5.Text = "EMPLOYEE MANAGEMENT";
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(500, 246);
+            this.btnBack.Location = new System.Drawing.Point(500, 260);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(107, 23);
             this.btnBack.TabIndex = 63;
@@ -139,7 +140,7 @@
             // 
             // btnUpdateEmp
             // 
-            this.btnUpdateEmp.Location = new System.Drawing.Point(339, 246);
+            this.btnUpdateEmp.Location = new System.Drawing.Point(339, 260);
             this.btnUpdateEmp.Name = "btnUpdateEmp";
             this.btnUpdateEmp.Size = new System.Drawing.Size(107, 23);
             this.btnUpdateEmp.TabIndex = 62;
@@ -149,7 +150,7 @@
             // 
             // btnAddEmp
             // 
-            this.btnAddEmp.Location = new System.Drawing.Point(171, 246);
+            this.btnAddEmp.Location = new System.Drawing.Point(171, 260);
             this.btnAddEmp.Name = "btnAddEmp";
             this.btnAddEmp.Size = new System.Drawing.Size(107, 23);
             this.btnAddEmp.TabIndex = 61;
@@ -161,7 +162,7 @@
             // 
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(14, 298);
+            this.dataGridView1.Location = new System.Drawing.Point(14, 312);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(762, 236);
             this.dataGridView1.TabIndex = 64;
@@ -169,7 +170,7 @@
             // 
             // btnSearchEmp
             // 
-            this.btnSearchEmp.Location = new System.Drawing.Point(378, 58);
+            this.btnSearchEmp.Location = new System.Drawing.Point(373, 74);
             this.btnSearchEmp.Name = "btnSearchEmp";
             this.btnSearchEmp.Size = new System.Drawing.Size(85, 23);
             this.btnSearchEmp.TabIndex = 55;
@@ -179,14 +180,14 @@
             // 
             // txtSearchEmp
             // 
-            this.txtSearchEmp.Location = new System.Drawing.Point(150, 60);
+            this.txtSearchEmp.Location = new System.Drawing.Point(142, 76);
             this.txtSearchEmp.Name = "txtSearchEmp";
             this.txtSearchEmp.Size = new System.Drawing.Size(191, 20);
             this.txtSearchEmp.TabIndex = 54;
             // 
             // txtEName
             // 
-            this.txtEName.Location = new System.Drawing.Point(124, 142);
+            this.txtEName.Location = new System.Drawing.Point(124, 156);
             this.txtEName.Name = "txtEName";
             this.txtEName.Size = new System.Drawing.Size(263, 20);
             this.txtEName.TabIndex = 56;
@@ -194,7 +195,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 145);
+            this.label1.Location = new System.Drawing.Point(30, 159);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 13);
             this.label1.TabIndex = 60;
@@ -203,7 +204,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(214, 104);
+            this.label6.Location = new System.Drawing.Point(214, 118);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(67, 13);
             this.label6.TabIndex = 71;
@@ -212,7 +213,7 @@
             // txtEmpID
             // 
             this.txtEmpID.Cursor = System.Windows.Forms.Cursors.No;
-            this.txtEmpID.Location = new System.Drawing.Point(308, 101);
+            this.txtEmpID.Location = new System.Drawing.Point(308, 115);
             this.txtEmpID.Name = "txtEmpID";
             this.txtEmpID.ReadOnly = true;
             this.txtEmpID.Size = new System.Drawing.Size(263, 20);
@@ -222,7 +223,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 534);
+            this.BackColor = System.Drawing.Color.Tan;
+            this.ClientSize = new System.Drawing.Size(780, 534);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtEmpID);
             this.Controls.Add(this.btnShowEmp);

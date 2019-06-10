@@ -63,7 +63,8 @@ namespace GUI
         {
             DataTable tblRent = new DataTable();
             tblRent = new CustomerBUS().Display(@"
-SELECT        [Order].OrderID, dress.DressName AS [Dress Name], dress.DressDecription AS [Dress Decription], dress.Price, OrderLine.Quantity, OrderLine.Quantity * dress.Price AS Total
+SELECT        [Order].OrderID, dress.DressName AS [Dress Name], dress.DressDecription AS [Dress Decription], dress.Price, OrderLine.Quantity, OrderLine.Quantity * dress.Price AS [Sum],
+                [Order].OrderDate AS [Order Date]
 FROM            [Order] INNER JOIN
                          OrderLine ON [Order].OrderID = OrderLine.OrderID INNER JOIN
                          dress ON OrderLine.DressID = dress.DressID

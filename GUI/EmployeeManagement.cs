@@ -22,6 +22,15 @@ namespace GUI
         {
             InitializeComponent();
         }
+        private void ClearData()
+        {
+            txtEmpID.Text = "";
+            txtEName.Text = "";
+            txtEPass.Text = "";
+            cbERole.Text = "";
+            cbEStatus.Text = "";
+        }
+
 
         private void btnSearchEmp_Click(object sender, EventArgs e)
         {
@@ -53,6 +62,7 @@ namespace GUI
             }
 
             EmployeeManagement_Load(sender, e);
+            ClearData();
         }
 
         private void btnUpdateEmp_Click(object sender, EventArgs e)
@@ -80,6 +90,7 @@ namespace GUI
             }
 
             EmployeeManagement_Load(sender, e);
+            ClearData();
         }
         private void openMainForm(object obj)
         {

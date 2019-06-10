@@ -62,7 +62,7 @@ namespace GUI
 
         private void openNextForm(object obj)
         {
-            Application.Run(new Main());
+            Application.Run(new EmployeeMainForm());
         }
 
         private void openAdminForm(object obj)

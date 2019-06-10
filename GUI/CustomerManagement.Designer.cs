@@ -176,9 +176,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(171, 24);
+            this.label5.Font = new System.Drawing.Font("Segoe Print", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(125, 24);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(148, 13);
+            this.label5.Size = new System.Drawing.Size(313, 37);
             this.label5.TabIndex = 14;
             this.label5.Text = "CUSTOMER MANAGEMENT";
             // 
@@ -231,9 +232,9 @@
             // 
             // btnOrderHistory
             // 
-            this.btnOrderHistory.Location = new System.Drawing.Point(485, 24);
+            this.btnOrderHistory.Location = new System.Drawing.Point(536, 26);
             this.btnOrderHistory.Name = "btnOrderHistory";
-            this.btnOrderHistory.Size = new System.Drawing.Size(146, 23);
+            this.btnOrderHistory.Size = new System.Drawing.Size(146, 40);
             this.btnOrderHistory.TabIndex = 20;
             this.btnOrderHistory.Text = "Order History";
             this.btnOrderHistory.UseVisualStyleBackColor = true;
@@ -243,6 +244,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Tan;
             this.ClientSize = new System.Drawing.Size(728, 593);
             this.Controls.Add(this.btnOrderHistory);
             this.Controls.Add(this.label6);

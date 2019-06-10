@@ -19,6 +19,9 @@ select * from Customer
 select * from [Order]
 select *from OrderLine
 
+update Employee set IsAdmin ='admin' where EmployeeID =1001;
+
+update Employee set IsAdmin ='employee' where EmployeeID =1000;
 create table employee 
 (
 	EmployeeID INT IDENTITY(1,1) NOT NULL,
@@ -119,12 +122,13 @@ BEGIN
 	where @dressID = DressID
 END
 
+select * from [Order] join OrderLine on [Order].OrderID =OrderLine.OrderID
 
 SELECT        [Order].CustomerID, SUM(OrderLine.Sum) AS Total
 FROM            [Order] INNER JOIN
                          OrderLine ON [Order].OrderID = OrderLine.OrderID INNER JOIN
                          dress ON OrderLine.DressID = dress.DressID
-WHERE        ([Order].CustomerID = 1)
+WHERE        ([Order].CustomerID = 3)
 GROUP BY [Order].CustomerID;
 
 
